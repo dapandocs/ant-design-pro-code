@@ -12,6 +12,7 @@
  */
 
 import type { IConfigFromPlugins } from '@@/core/pluginConfig';
+import type { MenuDataItem } from '@ant-design/pro-components';
 
 export default [
   {
@@ -32,6 +33,11 @@ export default [
     component: './Home',
   },
   {
+    path: 'https://www.baidu.com/',
+    name: '百度',
+    target: '_blank',
+  },
+  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
@@ -42,7 +48,6 @@ export default [
     path: '/admin',
     name: 'admin',
     icon: 'crown',
-    access: 'canAdmin',
     routes: [
       {
         path: '/admin',
@@ -70,4 +75,4 @@ export default [
     layout: false,
     component: './404',
   },
-] as IConfigFromPlugins['routes'];
+] as IConfigFromPlugins['routes'] & MenuDataItem[];
