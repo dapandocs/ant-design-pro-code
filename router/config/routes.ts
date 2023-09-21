@@ -26,9 +26,16 @@ export default [
     ],
   },
   {
+    path: '/home',
+    name: '新首页',
+    icon: 'home',
+    component: './Home',
+  },
+  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
+    wrappers: ['@/wrappers/auth'],
     component: './Welcome',
   },
   {
